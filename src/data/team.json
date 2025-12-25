@@ -1,0 +1,238 @@
+{
+  "$schema": "./schemas/team.schema.json",
+  "members": [
+    {
+      "id": "core-lead-1",
+      "name": "Lorem Ipsum",
+      "role": "GDG Lead",
+      "category": "core",
+      "image": "/team/placeholder.jpg",
+      "bio": "Lorem ipsum dolor sit amet consectetur adipiscing elit.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com",
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "blue",
+      "order": 1,
+      "isLead": true
+    },
+    {
+      "id": "core-2",
+      "name": "Dolor Sit",
+      "role": "Member",
+      "category": "core",
+      "image": "/team/placeholder.jpg",
+      "bio": "Sed do eiusmod tempor incididunt ut labore.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com",
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "red",
+      "order": 2,
+      "isLead": false
+    },
+    {
+      "id": "tech-lead-1",
+      "name": "Amet Consectetur",
+      "role": "Tech Lead",
+      "category": "tech",
+      "image": "/team/placeholder.jpg",
+      "bio": "Ut enim ad minim veniam quis nostrud.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com",
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "green",
+      "order": 1,
+      "isLead": true
+    },
+    {
+      "id": "tech-lead-2",
+      "name": "Adipiscing Elit",
+      "role": "ML/AI Lead",
+      "category": "tech",
+      "image": "/team/placeholder.jpg",
+      "bio": "Exercitation ullamco laboris nisi ut aliquip.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com",
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "yellow",
+      "order": 2,
+      "isLead": true
+    },
+    {
+      "id": "tech-3",
+      "name": "Tempor Incididunt",
+      "role": "Android Dev",
+      "category": "tech",
+      "image": "/team/placeholder.jpg",
+      "bio": "Duis aute irure dolor in reprehenderit.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com"
+      },
+      "color": "blue",
+      "order": 3,
+      "isLead": false
+    },
+    {
+      "id": "tech-4",
+      "name": "Ut Labore",
+      "role": "Backend Dev",
+      "category": "tech",
+      "image": "/team/placeholder.jpg",
+      "bio": "Excepteur sint occaecat cupidatat.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com"
+      },
+      "color": "red",
+      "order": 4,
+      "isLead": false
+    },
+    {
+      "id": "tech-5",
+      "name": "Dolore Magna",
+      "role": "Frontend Dev",
+      "category": "tech",
+      "image": "/team/placeholder.jpg",
+      "bio": "Sunt in culpa qui officia deserunt.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com"
+      },
+      "color": "green",
+      "order": 5,
+      "isLead": false
+    },
+    {
+      "id": "tech-6",
+      "name": "Aliqua Enim",
+      "role": "Cloud Dev",
+      "category": "tech",
+      "image": "/team/placeholder.jpg",
+      "bio": "Mollit anim id est laborum.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com"
+      },
+      "color": "yellow",
+      "order": 6,
+      "isLead": false
+    },
+    {
+      "id": "tech-7",
+      "name": "Minim Veniam",
+      "role": "DevOps",
+      "category": "tech",
+      "image": "/team/placeholder.jpg",
+      "bio": "Quis nostrud exercitation ullamco.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "github": "https://github.com"
+      },
+      "color": "blue",
+      "order": 7,
+      "isLead": false
+    },
+    {
+      "id": "management-lead-1",
+      "name": "Labore Dolore",
+      "role": "Events Lead",
+      "category": "management",
+      "image": "/team/placeholder.jpg",
+      "bio": "Voluptate velit esse cillum dolore eu fugiat.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      },
+      "color": "red",
+      "order": 1,
+      "isLead": true
+    },
+    {
+      "id": "management-2",
+      "name": "Magna Aliqua",
+      "role": "Operations",
+      "category": "management",
+      "image": "/team/placeholder.jpg",
+      "bio": "Excepteur sint occaecat cupidatat non proident.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "green",
+      "order": 2,
+      "isLead": false
+    },
+    {
+      "id": "design-lead-1",
+      "name": "Enim Minim",
+      "role": "Design Lead",
+      "category": "design",
+      "image": "/team/placeholder.jpg",
+      "bio": "Sunt in culpa qui officia deserunt mollit.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "instagram": "https://instagram.com",
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "yellow",
+      "order": 1,
+      "isLead": true
+    },
+    {
+      "id": "design-2",
+      "name": "Veniam Quis",
+      "role": "UI/UX Designer",
+      "category": "design",
+      "image": "/team/placeholder.jpg",
+      "bio": "Anim id est laborum sed perspiciatis.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "blue",
+      "order": 2,
+      "isLead": false
+    },
+    {
+      "id": "content-lead-1",
+      "name": "Nostrud Exercitation",
+      "role": "Content Lead",
+      "category": "content",
+      "image": "/team/placeholder.jpg",
+      "bio": "Unde omnis iste natus error sit voluptatem.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com"
+      },
+      "color": "red",
+      "order": 1,
+      "isLead": true
+    },
+    {
+      "id": "content-2",
+      "name": "Ullamco Laboris",
+      "role": "Social Media",
+      "category": "content",
+      "image": "/team/placeholder.jpg",
+      "bio": "Accusantium doloremque laudantium totam rem.",
+      "facts": ["Fact one", "Fact two", "Fact three"],
+      "socialLinks": {
+        "instagram": "https://instagram.com",
+        "twitter": "https://twitter.com"
+      },
+      "color": "green",
+      "order": 2,
+      "isLead": false
+    }
+  ]
+}
