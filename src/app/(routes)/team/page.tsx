@@ -11,6 +11,7 @@ import {
   type TeamMember,
 } from "@/components/comic";
 import teamData from "@/data/team.json";
+import Link from "next/link";
 
 export default function TeamPage() {
   const [activeCategory, setActiveCategory] = useState<TeamCategory | "all">(
@@ -76,12 +77,12 @@ export default function TeamPage() {
           <div className="inline-block rotate-1 rounded-xl border-4 border-gray-800 bg-yellow-400 px-8 py-4 shadow-[6px_6px_0_0_#1f2937]">
             <p className="font-title text-xl font-bold text-gray-900">
               Want to join our team?{" "}
-              <a
+              <Link
                 href="mailto:gdg@ldce.ac.in"
                 className="underline decoration-4 underline-offset-4 hover:text-blue-800"
               >
                 Get in touch!
-              </a>
+              </Link>
             </p>
           </div>
         </div>

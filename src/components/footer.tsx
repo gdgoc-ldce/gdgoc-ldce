@@ -1,3 +1,11 @@
+import Link from "next/link";
+import {
+  FaXTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaHeart,
+} from "react-icons/fa6";
+
 const FOOTER_SECTIONS = [
   {
     title: "Community",
@@ -29,9 +37,9 @@ const FOOTER_SECTIONS = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: "𝕏", href: "#" },
-  { icon: "in", href: "#" },
-  { icon: "📷", href: "#" },
+  { icon: FaXTwitter, href: "#" },
+  { icon: FaLinkedinIn, href: "#" },
+  { icon: FaInstagram, href: "#" },
 ];
 
 export default function Footer() {
@@ -53,15 +61,18 @@ export default function Footer() {
               Ahmedabad. Empowering students through technology.
             </p>
             <div className="flex gap-3">
-              {SOCIAL_LINKS.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 transition-colors hover:bg-gray-200"
-                >
-                  <span className="text-lg">{social.icon}</span>
-                </a>
-              ))}
+              {SOCIAL_LINKS.map((social, index) => {
+                const IconComponent = social.icon;
+                return (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-700 transition-colors hover:bg-gray-200"
+                  >
+                    <IconComponent />
+                  </Link>
+                );
+              })}
             </div>
           </div>
           {FOOTER_SECTIONS.map((section) => (
@@ -72,9 +83,9 @@ export default function Footer() {
               <ul className="space-y-3 text-sm text-gray-600">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href} className="hover:text-gray-900">
+                    <Link href={link.href} className="hover:text-gray-900">
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -88,17 +99,18 @@ export default function Footer() {
                 © 2025 Google Developer Groups on Campus - LDCE. All rights
                 reserved.
               </p>
-              <p className="mt-1 text-xs md:mt-0">
-                Made with ❤️ by GDGOC LDCE Team
+              <p className="mt-1 flex items-center gap-1 text-xs md:mt-0">
+                Made with <FaHeart className="text-red-500" /> by GDGOC LDCE
+                Team
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-sm hover:text-gray-900">
+              <Link href="#" className="text-sm hover:text-gray-900">
                 Privacy
-              </a>
-              <a href="#" className="text-sm hover:text-gray-900">
+              </Link>
+              <Link href="#" className="text-sm hover:text-gray-900">
                 Terms
-              </a>
+              </Link>
             </div>
           </div>
         </div>

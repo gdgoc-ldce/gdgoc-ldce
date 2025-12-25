@@ -33,7 +33,7 @@ export default function RootLayout({
       <body className="font-['Inter']">
         <SmoothScroll />
         <Navigation />
-        <main className="min-h-[60vh]">{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
       </body>
     </html>

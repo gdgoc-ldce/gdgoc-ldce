@@ -2,11 +2,12 @@
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import GdgLogoIcon from "./gdg-logo-icon";
+import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#events", label: "Events" },
-  { href: "#team", label: "Team" },
+  { href: "/#about", label: "About" },
+  { href: "/events", label: "Events" },
+  { href: "/team", label: "Team" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -26,29 +27,29 @@ export default function Navigation() {
     <>
       <nav className="sticky inset-x-0 top-0 z-50 border-b border-gray-200/60 bg-white/80 backdrop-blur-lg">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-          <a href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <GdgLogoIcon />
             <span className="font-title text-xl font-bold tracking-widest text-gray-900">
               GDGOC LDCE
             </span>
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-8 md:flex">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
+            <Link
               href="#"
               className="rounded-full bg-gray-900 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-gray-800 hover:shadow-lg"
             >
               Join Us
-            </a>
+            </Link>
           </div>
 
           <button
@@ -117,7 +118,7 @@ export default function Navigation() {
               }}
               className="flex h-16 items-center justify-between px-5"
             >
-              <a
+              <Link
                 href="/"
                 onClick={() => setOpen(false)}
                 className="flex items-center gap-2"
@@ -126,7 +127,7 @@ export default function Navigation() {
                 <span className="font-title text-xl font-bold tracking-widest text-gray-900">
                   GDGOC
                 </span>
-              </a>
+              </Link>
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
@@ -190,7 +191,7 @@ export default function Navigation() {
               }}
               className="relative z-10 p-6"
             >
-              <a
+              <Link
                 href="#"
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gray-900 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-gray-800 hover:shadow-xl active:scale-[0.97]"
@@ -211,7 +212,7 @@ export default function Navigation() {
                   <line x1="5" y1="12" x2="19" y2="12" />
                   <polyline points="12 5 19 12 12 19" />
                 </motion.svg>
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         )}

@@ -5,7 +5,7 @@ import * as THREE from "three";
 import { Suspense, useRef, useState, useEffect } from "react";
 import { Mesh, Group } from "three";
 
-// 3D Pill component for GDG logo
+// 3D Pill for logo
 function Pill({
   position,
   rotation,
@@ -43,7 +43,7 @@ function Pill({
     </mesh>
   );
 }
-// Main GDG Logo animation group
+
 function GDGLogoGroup({ scrollProgress }: { scrollProgress: number }) {
   const groupRef = useRef<Group>(null);
 
