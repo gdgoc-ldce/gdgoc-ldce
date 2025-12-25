@@ -14,12 +14,14 @@ export default function ComicTitle({
   halftone = true,
   wide = true,
   titleFonts = true,
+  shadow = true,
 }: {
   children: ReactNode;
   bg: "red" | "green" | "blue" | "yellow" | "white";
   halftone?: boolean;
   wide?: boolean;
   titleFonts?: boolean;
+  shadow?: boolean;
 }) {
   return (
     <div className="relative my-5 w-fit">
@@ -45,12 +47,14 @@ export default function ComicTitle({
           ></span>
         )}
       </div>
-      <span
-        style={{
-          clipPath: "polygon(0% 20%, 100% 5%, 95% 100%, 2% 95%)",
-        }}
-        className="absolute top-0 h-full w-full scale-113 bg-black"
-      ></span>
+      {shadow && (
+        <span
+          style={{
+            clipPath: "polygon(0% 20%, 100% 5%, 95% 100%, 2% 95%)",
+          }}
+          className="absolute top-0 h-full w-full scale-113 bg-black"
+        ></span>
+      )}
 
       <span
         style={{

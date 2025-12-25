@@ -29,6 +29,7 @@ export {
   ComicLayout,
   ExpandingPanel,
   TeamCategoryLayout,
+  CampusLeadHero,
   TEAM_CATEGORIES,
   type TeamMember,
   type TeamCategory,

@@ -6,3 +6,4 @@ export { ComicPanel } from "./comic-panel";
 export { ComicLayout } from "./comic-layout";
 export { ExpandingPanel } from "./expanding-panel";
 export { TeamCategoryLayout } from "./team-category-layout";
+export { CampusLeadHero } from "./campus-lead-hero";

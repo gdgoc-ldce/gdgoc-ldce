@@ -65,7 +65,9 @@ export function CategoryNav({
                 whileTap={{ scale: 0.95 }}
                 aria-pressed={isActive}
               >
-                <span className="text-lg">{category.icon}</span>
+                {"icon" in category && category.icon && (
+                  <span className="text-lg">{category.icon}</span>
+                )}
                 <span className="hidden sm:inline">{category.label}</span>
 
                 {isActive && (

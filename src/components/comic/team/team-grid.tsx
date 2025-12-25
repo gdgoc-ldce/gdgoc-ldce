@@ -36,7 +36,7 @@ export function TeamGrid({ members, activeCategory }: TeamGridProps) {
           className="mb-8 text-center"
         >
           <div className="inline-flex items-center gap-3 rounded-xl border-4 border-gray-800 bg-white px-6 py-3 shadow-[6px_6px_0_0_#1f2937]">
-            <span className="text-3xl">{categoryInfo.icon}</span>
+            <span className="text-3xl">{categoryInfo.label.charAt(0)}</span>
             <div className="text-left">
               <h2
                 className="font-title text-xl font-bold"

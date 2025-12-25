@@ -8,11 +8,11 @@ export const GOOGLE_COLORS = {
 export type GoogleColor = keyof typeof GOOGLE_COLORS;
 
 export type TeamCategory =
-  | "core"
   | "tech"
   | "management"
-  | "design"
-  | "content";
+  | "creative"
+  | "events"
+  | "social-media";
 
 export interface SocialLinks {
   github?: string;
@@ -26,7 +26,7 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
-  category: TeamCategory;
+  category: TeamCategory | "campus-lead";
   image?: string;
   bio?: string;
   facts?: string[];
@@ -39,45 +39,39 @@ export interface TeamMember {
 export interface TeamCategoryInfo {
   id: TeamCategory;
   label: string;
-  icon: string;
   description: string;
   color: GoogleColor;
 }
 
 export const TEAM_CATEGORIES: TeamCategoryInfo[] = [
   {
-    id: "core",
-    label: "Core Team",
-    icon: "⭐",
-    description: "The leaders driving our community forward",
+    id: "tech",
+    label: "Tech Team",
+    description: "Building amazing things with code",
     color: "blue",
   },
   {
-    id: "tech",
-    label: "Tech Team",
-    icon: "💻",
-    description: "Building amazing things with code",
+    id: "creative",
+    label: "Creative Team",
+    description: "Crafting beautiful visual experiences",
+    color: "red",
+  },
+  {
+    id: "events",
+    label: "Events & Engagement",
+    description: "Creating memorable experiences",
     color: "green",
   },
   {
     id: "management",
-    label: "Management",
-    icon: "📋",
+    label: "Management Team",
     description: "Orchestrating events and operations",
-    color: "red",
-  },
-  {
-    id: "design",
-    label: "Design Team",
-    icon: "🎨",
-    description: "Crafting beautiful visual experiences",
     color: "yellow",
   },
   {
-    id: "content",
-    label: "Content Team",
-    icon: "✍️",
-    description: "Telling stories that inspire",
+    id: "social-media",
+    label: "Social Media & Marketing",
+    description: "Spreading the word and building community",
     color: "blue",
   },
 ];

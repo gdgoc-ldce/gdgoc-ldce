@@ -25,7 +25,14 @@
           },
           "category": {
             "type": "string",
-            "enum": ["core", "tech", "management", "design", "content"],
+            "enum": [
+              "campus-lead",
+              "tech",
+              "management",
+              "creative",
+              "events",
+              "social-media"
+            ],
             "description": "Team category"
           },
           "image": {

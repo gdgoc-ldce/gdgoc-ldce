@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   ComicTitle,
-  ExpandingPanel,
-  CategoryNav,
   TeamCategoryLayout,
+  CampusLeadHero,
   TEAM_CATEGORIES,
+  GOOGLE_COLORS,
   type TeamCategory,
   type TeamMember,
 } from "@/components/comic";
@@ -19,6 +20,8 @@ export default function TeamPage() {
   );
 
   const members = teamData.members as TeamMember[];
+  const campusLead = members.find((m) => m.category === "campus-lead");
+  const teamMembers = members.filter((m) => m.category !== "campus-lead");
 
   const categoriesToShow =
     activeCategory === "all"
@@ -26,65 +29,146 @@ export default function TeamPage() {
       : TEAM_CATEGORIES.filter((c) => c.id === activeCategory);
 
   const getMembersByCategory = (categoryId: TeamCategory) =>
-    members
+    teamMembers
       .filter((m) => m.category === categoryId)
       .sort((a, b) => a.order - b.order);
 
   return (
-    <main className="min-h-screen">
-      <header className="border-b-4 border-white/20 bg-white py-8">
-        <div className="container mx-auto flex flex-col items-center px-4">
-          <ComicTitle bg="red">Our Heroes</ComicTitle>
-          <p className="mt-4 text-center text-lg text-gray-600">
-            The amazing team behind GDG on Campus LDCE
-          </p>
-        </div>
-      </header>
-
-      <nav className="relative top-0 z-50 border-b-4 border-white/20 py-4">
+    <main className="min-h-screen bg-gray-50">
+      <div className="flex items-center justify-center">
+        {campusLead && <CampusLeadHero member={campusLead} />}
+      </div>
+      <section className="relative py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <CategoryNav
-            activeCategory={activeCategory}
-            onCategoryChange={setActiveCategory}
-          />
-        </div>
-      </nav>
-
-      <div className="h-[10vh]" />
-
-      {categoriesToShow.map((category) => (
-        <div key={category.id}>
-          <ExpandingPanel>
-            <div className="flex h-full w-full flex-col">
-              <div className="border-b-4 border-gray-800 bg-white px-6 py-4">
-                <span className="mr-3 text-3xl">{category.icon}</span>
-                <span className="font-title text-2xl font-bold">
-                  {category.label}
-                </span>
-                <p className="mt-1 text-sm text-gray-600">
-                  {category.description}
-                </p>
-              </div>
-              <TeamCategoryLayout members={getMembersByCategory(category.id)} />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-8 flex flex-col items-center justify-center text-center"
+          >
+            <div className="relative w-fit">
+              <ComicTitle bg="blue" shadow={false}>
+                Meet The Team
+              </ComicTitle>
             </div>
-          </ExpandingPanel>
-          <div className="h-[30vh]" />
-        </div>
-      ))}
+            <p className="mx-auto mt-8 max-w-2xl text-lg text-gray-600">
+              The amazing people who make GDG on Campus LDCE possible
+            </p>
+          </motion.div>
 
-      <footer className="border-t-4 border-white/20 bg-white py-8">
+          <div className="mb-10 flex flex-wrap justify-center gap-3">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setActiveCategory("all")}
+              className={`font-title rounded-xl border-4 px-5 py-2.5 text-lg font-bold transition-all ${
+                activeCategory === "all"
+                  ? "border-gray-800 bg-gray-800 text-white shadow-[4px_4px_0_0_#4285F4]"
+                  : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+              }`}
+            >
+              All Teams
+            </motion.button>
+            {TEAM_CATEGORIES.map((category) => (
+              <motion.button
+                key={category.id}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setActiveCategory(category.id)}
+                className={`font-title rounded-xl border-4 px-5 py-2.5 text-lg font-bold transition-all ${
+                  activeCategory === category.id
+                    ? "border-gray-800 text-white shadow-[4px_4px_0_0_#1f2937]"
+                    : "border-gray-300 bg-white text-gray-700 hover:border-gray-400"
+                }`}
+                style={{
+                  backgroundColor:
+                    activeCategory === category.id
+                      ? GOOGLE_COLORS[category.color]
+                      : undefined,
+                }}
+              >
+                {category.label}
+              </motion.button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {categoriesToShow.map((category, categoryIndex) => {
+        const categoryMembers = getMembersByCategory(category.id);
+        if (categoryMembers.length === 0) return null;
+
+        return (
+          <motion.section
+            key={category.id}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+            className="relative pb-16"
+          >
+            <div className="container mx-auto px-4">
+              <motion.div
+                initial={{ x: -30, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                className="mb-8 flex items-center gap-4"
+              >
+                <div
+                  className="h-16 w-2 rounded-full"
+                  style={{ backgroundColor: GOOGLE_COLORS[category.color] }}
+                />
+                <div>
+                  <h2 className="font-title text-3xl font-bold text-gray-900 md:text-4xl">
+                    {category.label}
+                  </h2>
+                  <p className="text-gray-600">{category.description}</p>
+                </div>
+              </motion.div>
+            </div>
+
+            <TeamCategoryLayout members={categoryMembers} />
+
+            {/* {categoryIndex < categoriesToShow.length - 1 && (
+              <div className="mt-16 flex justify-center">
+                <div className="flex gap-2">
+                  {(["blue", "red", "yellow", "green"] as const).map(
+                    (color) => (
+                      <div
+                        key={color}
+                        className="h-2 w-2 rounded-full"
+                        style={{ backgroundColor: GOOGLE_COLORS[color] }}
+                      />
+                    ),
+                  )}
+                </div>
+              </div>
+            )} */}
+          </motion.section>
+        );
+      })}
+
+      <footer className="border-t-4 border-gray-200 bg-white py-12">
         <div className="container mx-auto px-4 text-center">
-          <div className="inline-block rotate-1 rounded-xl border-4 border-gray-800 bg-yellow-400 px-8 py-4 shadow-[6px_6px_0_0_#1f2937]">
-            <p className="font-title text-xl font-bold text-gray-900">
-              Want to join our team?{" "}
+          <motion.div
+            initial={{ rotate: -2, scale: 0.9 }}
+            whileInView={{ rotate: 1, scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ rotate: 0, scale: 1.02 }}
+            className="inline-block"
+          >
+            <div className="rounded-xl border-4 border-gray-800 bg-yellow-400 px-8 py-6 shadow-[6px_6px_0_0_#1f2937]">
+              <p className="font-title text-2xl font-bold text-gray-900">
+                Want to join our team?
+              </p>
               <Link
                 href="mailto:gdg@ldce.ac.in"
-                className="underline decoration-4 underline-offset-4 hover:text-blue-800"
+                className="mt-2 inline-block font-semibold text-gray-800 underline decoration-4 underline-offset-4 transition-colors hover:text-blue-700"
               >
                 Get in touch!
               </Link>
-            </p>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </footer>
     </main>
