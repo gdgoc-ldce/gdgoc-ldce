@@ -10,9 +10,15 @@ const FOOTER_SECTIONS = [
   {
     title: "Community",
     links: [
+<<<<<<< HEAD
       { label: "About Us", href: "#" },
       { label: "Our Team", href: "#" },
       { label: "Events", href: "#" },
+=======
+      { label: "About Us", href: "/#about" },
+      { label: "Our Team", href: "/team" },
+      { label: "Events", href: "/events" },
+>>>>>>> origin/keval
       { label: "Blog", href: "#" },
     ],
   },
@@ -28,10 +34,17 @@ const FOOTER_SECTIONS = [
   {
     title: "Connect",
     links: [
+<<<<<<< HEAD
       { label: "Contact Us", href: "#" },
       { label: "Join Discord", href: "#" },
       { label: "Newsletter", href: "#" },
       { label: "Partnership", href: "#" },
+=======
+      { label: "Contact Us", href: "/contact" },
+      { label: "Join Discord", href: "/contact" },
+      { label: "Newsletter", href: "/contact" },
+      { label: "Partnership", href: "/contact" },
+>>>>>>> origin/keval
     ],
   },
 ];
@@ -39,7 +52,11 @@ const FOOTER_SECTIONS = [
 const SOCIAL_LINKS = [
   { icon: FaXTwitter, href: "#" },
   { icon: FaLinkedinIn, href: "#" },
+<<<<<<< HEAD
   { icon: FaInstagram, href: "#" },
+=======
+  { icon: FaInstagram, href: "https://instagram.com/gdgocldce" },
+>>>>>>> origin/keval
 ];
 
 export default function Footer() {

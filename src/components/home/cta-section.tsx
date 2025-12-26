@@ -15,9 +15,18 @@ export default function CtaSection() {
             <button className="font-title rounded-full bg-white px-10 py-5 text-lg font-bold tracking-widest text-blue-600 uppercase shadow-xl transition-all hover:scale-105 hover:bg-gray-100">
               Join Community →
             </button>
+<<<<<<< HEAD
             <button className="font-title rounded-full border-2 border-white bg-transparent px-10 py-5 text-lg font-bold tracking-widest text-white uppercase transition-all hover:scale-105 hover:bg-white/10">
               Contact Us
             </button>
+=======
+            <a 
+              href="/contact" 
+              className="font-title rounded-full border-2 border-white bg-transparent px-10 py-5 text-lg font-bold tracking-widest text-white uppercase transition-all hover:scale-105 hover:bg-white/10"
+            >
+              Contact Us
+            </a>
+>>>>>>> origin/keval
           </div>
         </div>
       </div>

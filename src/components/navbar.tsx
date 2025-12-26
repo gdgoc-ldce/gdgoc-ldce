@@ -8,7 +8,11 @@ const NAV_LINKS = [
   { href: "/#about", label: "About" },
   { href: "/events", label: "Events" },
   { href: "/team", label: "Team" },
+<<<<<<< HEAD
   { href: "#contact", label: "Contact" },
+=======
+  { href: "/contact", label: "Contact" },
+>>>>>>> origin/keval
 ];
 
 export default function Navigation() {
@@ -45,7 +49,11 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
+<<<<<<< HEAD
               href="#"
+=======
+              href="/contact"
+>>>>>>> origin/keval
               className="rounded-full bg-gray-900 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-gray-800 hover:shadow-lg"
             >
               Join Us
@@ -192,7 +200,11 @@ export default function Navigation() {
               className="relative z-10 p-6"
             >
               <Link
+<<<<<<< HEAD
                 href="#"
+=======
+                href="/contact"
+>>>>>>> origin/keval
                 onClick={() => setOpen(false)}
                 className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gray-900 py-4 text-base font-bold text-white shadow-lg transition-all hover:bg-gray-800 hover:shadow-xl active:scale-[0.97]"
               >

@@ -21,6 +21,15 @@ export const env = createEnv({
     DATABASE_URL: process.env.DATABASE_URL,
     NODE_ENV: process.env.NODE_ENV,
   },
+<<<<<<< HEAD
   skipValidation: !!process.env.SKIP_ENV_VALIDATION,
   emptyStringAsUndefined: true,
 });
+=======
+  skipValidation: process.env.NODE_ENV === "production",
+  emptyStringAsUndefined: true,
+});
+
+console.log("Environment variables loaded:", env);
+
+>>>>>>> origin/keval
