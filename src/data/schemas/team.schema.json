@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Team Data Schema",
+  "description": "Schema for GDG on Campus LDCE team members",
+  "type": "object",
+  "required": ["members"],
+  "properties": {
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "role", "category", "color", "order"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the team member"
+          },
+          "name": {
+            "type": "string",
+            "description": "Full name of the team member"
+          },
+          "role": {
+            "type": "string",
+            "description": "Role or position in the team"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "campus-lead",
+              "tech",
+              "management",
+              "creative",
+              "events",
+              "social-media"
+            ],
+            "description": "Team category"
+          },
+          "image": {
+            "type": "string",
+            "description": "URL or path to profile image"
+          },
+          "bio": {
+            "type": "string",
+            "description": "Short biography"
+          },
+          "socialLinks": {
+            "type": "object",
+            "properties": {
+              "github": { "type": "string" },
+              "linkedin": { "type": "string" },
+              "twitter": { "type": "string" },
+              "instagram": { "type": "string" },
+              "website": { "type": "string" }
+            }
+          },
+          "color": {
+            "type": "string",
+            "enum": ["blue", "red", "green", "yellow"],
+            "description": "Google color for styling"
+          },
+          "order": {
+            "type": "number",
+            "description": "Display order within category"
+          }
+        }
+      }
+    }
+  }
+}
