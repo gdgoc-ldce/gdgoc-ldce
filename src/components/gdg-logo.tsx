@@ -5,7 +5,6 @@ import * as THREE from "three";
 import { Suspense, useRef, useState, useEffect } from "react";
 import { Mesh, Group } from "three";
 
-// 3D Pill for logo
 function Pill({
   position,
   rotation,
@@ -68,8 +67,6 @@ function GDGLogoGroup({ scrollProgress }: { scrollProgress: number }) {
 
   return (
     <group ref={groupRef}>
-      {/* Left bracket < */}
-      {/* Red pill (top left) */}
       <Pill
         position={[-1.5, 0.55, 0]}
         rotation={[0, 0, -Math.PI * 0.25]}
@@ -77,7 +74,6 @@ function GDGLogoGroup({ scrollProgress }: { scrollProgress: number }) {
         // pillLength={}
         scrollProgress={scrollProgress}
       />
-      {/* Blue pill (bottom left) */}
       <Pill
         position={[-1.5, -0.55, 0]}
         rotation={[0, 0, Math.PI * 0.25]}
@@ -87,8 +83,6 @@ function GDGLogoGroup({ scrollProgress }: { scrollProgress: number }) {
         scrollProgress={scrollProgress}
       />
 
-      {/* Right bracket > */}
-      {/* Green pill (top right) */}
       <Pill
         position={[1.5, 0.55, 0]}
         rotation={[0, 0, Math.PI * 0.25]}
@@ -97,7 +91,6 @@ function GDGLogoGroup({ scrollProgress }: { scrollProgress: number }) {
         pillThickness={0.61}
         scrollProgress={scrollProgress}
       />
-      {/* Yellow pill (bottom right) */}
       <Pill
         position={[1.5, -0.55, 0]}
         rotation={[0, 0, -Math.PI * 0.25]}
@@ -179,7 +172,6 @@ function GoogleDoodles({ scrollProgress }: { scrollProgress: number }) {
 function Scene({ scrollProgress }: { scrollProgress: number }) {
   return (
     <>
-      {/* Bright white background plane */}
       <mesh position={[0, 0, -10]}>
         <planeGeometry args={[50, 50]} />
         <meshStandardMaterial
@@ -190,7 +182,6 @@ function Scene({ scrollProgress }: { scrollProgress: number }) {
         />
       </mesh>
 
-      {/* Lighting */}
       <ambientLight intensity={3} />
       <directionalLight
         position={[0, 0, 10]}
@@ -206,10 +197,8 @@ function Scene({ scrollProgress }: { scrollProgress: number }) {
       />
       <pointLight position={[0, 0, 10]} intensity={2} color="#ffffff" />
 
-      {/* Google colored doodles in background */}
       <GoogleDoodles scrollProgress={scrollProgress} />
 
-      {/* Main GDG logo */}
       <Suspense fallback={<LoadingFallback />}>
         <GDGLogoGroup scrollProgress={scrollProgress} />
       </Suspense>

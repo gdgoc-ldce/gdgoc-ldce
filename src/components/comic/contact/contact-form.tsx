@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import type { ChangeEvent, FormEvent } from "react";
 
-// Assuming these are correctly imported from your project structure
 import GdgLogoIcon from "@/components/gdg-logo-icon";
 import { GOOGLE_COLORS } from "./constants";
 import type { ContactFormData, ContactFormErrors } from "./types";
@@ -13,7 +12,7 @@ type ContactFormProps = {
   errors: ContactFormErrors;
   touched: Record<keyof ContactFormData, boolean>;
   isHovering: boolean;
-  isSubmitting: boolean; // Prop to track submission status
+  isSubmitting: boolean;
   onHoverChange: (hovering: boolean) => void;
   onInputChange: (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -35,7 +34,6 @@ export default function ContactForm({
   const emailError = touched.email ? errors.email : undefined;
   const messageError = touched.message ? errors.message : undefined;
 
-  // The form can be submitted only if there are no errors and it's not currently submitting.
   const canSubmit = !nameError && !emailError && !messageError && !isSubmitting;
 
   return (
@@ -45,14 +43,11 @@ export default function ContactForm({
       </div>
 
       <form onSubmit={onSubmit} className="space-y-6">
-        {/* --- ADDED: Hidden inputs for FormSubmit.co configuration --- */}
-        {/* This is a fallback redirect for non-JS users. Our AJAX call handles the success state. */}
         <input
           type="hidden"
           name="_next"
           value="https://your-website.com/thank-you"
         />
-        {/* Optional: Disable the reCAPTCHA challenge. Not recommended for production. */}
         <input type="hidden" name="_captcha" value="false" />
 
         <div className="relative">

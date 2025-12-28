@@ -46,8 +46,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    // --- COOLDOWN LOGIC START ---
-    const COOLDOWN_SECONDS = 60; // Set cooldown to 1 minute
+    const COOLDOWN_SECONDS = 60;
     const lastSubmitTime = localStorage.getItem("lastSubmitTime");
 
     if (lastSubmitTime) {
@@ -57,10 +56,9 @@ export default function ContactPage() {
           (COOLDOWN_SECONDS * 1000 - timeSinceLastSubmit) / 1000,
         );
         alert(`Please wait ${timeLeft} more seconds before submitting again.`);
-        return; // Stop the submission
+        return;
       }
     }
-    // --- COOLDOWN LOGIC END ---
 
     setIsSubmitting(true);
 
@@ -88,7 +86,6 @@ export default function ContactPage() {
 
       if (response.ok) {
         setIsSubmitted(true);
-        // On successful submission, set the cooldown timestamp
         localStorage.setItem("lastSubmitTime", Date.now().toString());
       } else {
         console.error("Form submission failed:", await response.text());

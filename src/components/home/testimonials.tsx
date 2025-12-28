@@ -2,7 +2,6 @@ import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa6";
 
 export const Testimonials = () => {
-  // Doodle-style placeholder avatar
   const doodleAvatar = "/images/person.jpg";
   const cardsData = [
     {
@@ -47,11 +46,9 @@ export const Testimonials = () => {
     },
   ];
 
-  // The only changes are inside this CreateCard component
   const CreateCard = ({ card }: { card: (typeof cardsData)[0] }) => {
     const CardContent = (
       <div className="mx-4 w-72 shrink-0 cursor-pointer rounded-md border-2 border-black bg-white p-4 shadow-[4px_4px_0px_#000] transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0px_#000]">
-        {/* CARD HEADER */}
         <div className="flex items-center gap-3">
           <img
             className="size-11 rounded-full border-2 border-black"
@@ -61,7 +58,6 @@ export const Testimonials = () => {
           <div className="flex flex-col">
             <div className="flex items-center gap-1.5">
               <p className="font-bold text-black">{card.name}</p>
-              {/* Verified SVG */}
               <svg
                 width="12"
                 height="12"
@@ -79,12 +75,10 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        {/* CARD BODY */}
         <p className="py-4 text-black">
           {card.text.length > 220 ? card.text.slice(0, 220) + "..." : card.text}
         </p>
 
-        {/* CARD FOOTER */}
         <div className="flex items-center justify-between border-t-2 border-black pt-2 text-sm text-gray-600">
           <div className="flex items-center gap-1">
             <span>Posted on</span>
@@ -145,7 +139,6 @@ export const Testimonials = () => {
         }
       `}</style>
       <div className="marquee-row relative mx-auto w-full max-w-5xl overflow-hidden">
-        {/* ... Marquee structure remains the same ... */}
         <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-20 bg-linear-to-r from-[#f9f9f9] to-transparent"></div>
         <div className="marquee-inner flex min-w-[200%] transform-gpu pt-10 pb-5">
           {[...cardsData, ...cardsData].map((card, index) => (
@@ -155,7 +148,6 @@ export const Testimonials = () => {
         <div className="pointer-events-none absolute top-0 right-0 z-10 h-full w-20 bg-linear-to-l from-[#f9f9f9] to-transparent md:w-40"></div>
       </div>
       <div className="marquee-row relative mx-auto w-full max-w-5xl overflow-hidden">
-        {/* ... Marquee structure remains the same ... */}
         <div className="pointer-events-none absolute top-0 left-0 z-10 h-full w-20 bg-linear-to-r from-[#f9f9f9] to-transparent"></div>
         <div className="marquee-inner marquee-reverse flex min-w-[200%] transform-gpu pt-10 pb-5">
           {[...cardsData, ...cardsData].map((card, index) => (

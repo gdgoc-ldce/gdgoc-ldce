@@ -90,7 +90,6 @@ export const FaqSection = () => {
 
   return (
     <section className="relative flex w-full flex-col items-center justify-center px-4 py-20">
-      {/* Decorative halftone background */}
       <HalftoneOverlay color="#222" opacity={0.03} />
 
       <motion.h2
@@ -122,7 +121,6 @@ export const FaqSection = () => {
               }}
               className="relative"
             >
-              {/* Comic card */}
               <div
                 className="relative cursor-pointer overflow-hidden rounded-xl border-4 border-black bg-white transition-all hover:-translate-y-1"
                 style={{
@@ -130,16 +128,13 @@ export const FaqSection = () => {
                 }}
                 onClick={() => setOpenIdx(isOpen ? null : idx)}
               >
-                {/* Halftone accent */}
                 <HalftoneOverlay color={color} opacity={0.1} />
 
-                {/* Color bar on left */}
                 <div
                   className="absolute top-0 left-0 h-full w-2"
                   style={{ backgroundColor: color }}
                 />
 
-                {/* Question row */}
                 <div className="flex items-center gap-3 px-6 py-5">
                   <motion.span
                     className="font-title flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-black text-lg font-black text-white"
@@ -154,7 +149,6 @@ export const FaqSection = () => {
                   </h3>
                 </div>
 
-                {/* Answer - animated collapse */}
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
