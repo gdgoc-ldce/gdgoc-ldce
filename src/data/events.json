@@ -3,44 +3,61 @@
   "events": [
     {
       "id": "orientation-2025",
-      "title": "GDGoC LDCE Orientation — 2025",
+      "title": "GDGoC LDCE Orientation - 2025",
       "eventType": "Community Kickoff / Introduction Session",
-      "description": "The official orientation of GDGoC LDCE marked the beginning of our community journey. The session introduced students to the GDGoC mission, yearly roadmap, Google Developer ecosystem, and the opportunities available for the upcoming academic cycle.",
+      "description": "The official orientation of GDGoC LDCE marked the beginning of our community journey. Students explored the GDGoC mission, yearly roadmap, Google Developer ecosystem, and upcoming opportunities for the academic cycle.",
       "date": "2025-09-11",
       "details": [
         { "label": "Date", "value": "11 September 2025" },
-        { "label": "Venue", "value": "Vishwakarma Hall, LDCE" },
+        {
+          "label": "Venue",
+          "value": "Vishwakarma Hall, LD College of Engineering"
+        },
         { "label": "Attendance", "value": "200+ students" }
       ],
       "highlights": [
         { "text": "Launch of GDGoC LDCE" },
         { "text": "Yearly roadmap + upcoming events overview" },
         { "text": "Introduction to GDG ecosystem & student benefits" },
-        { "text": "Community Q&A" },
-        { "text": "Interaction with the core team" }
+        { "text": "Community Q&A and interaction with the core team" },
+        {
+          "text": "Student feedback: inspiring, informative, and beginner-friendly"
+        },
+        { "text": "Roadmap clarity appreciated by attendees" }
       ],
       "color": "blue",
       "order": 1
     },
     {
       "id": "cloud-study-jam-2025",
-      "title": "Google Cloud Study Jam 2025",
+      "title": "Google Cloud Study Jam 2025 (Tier 1 Achieved)",
       "eventType": "Hands-on Cloud Learning Program (1 Month)",
-      "description": "The Google Cloud Study Jam 2025 at GDGoC LDCE was a month-long cloud upskilling journey where students learned Google Cloud fundamentals through labs, quests, and hands-on activities. The program achieved Tier 1 status with exceptional participation and completion rates.",
+      "description": "A month-long, gamified cloud upskilling journey where students mastered Google Cloud fundamentals via labs, quests, and hands-on activities. Achieved Tier 1 status with standout completion and engagement metrics.",
       "date": "2025-10-20",
       "details": [
-        { "label": "Duration", "value": "20 Oct – 19 Nov 2025" },
+        { "label": "Duration", "value": "20 October – 19 November 2025" },
         { "label": "Mode", "value": "Online" },
-        { "label": "Completions", "value": "101 students" },
+        {
+          "label": "Completions",
+          "value": "101 students finished 19 badges + 1 arcade game"
+        },
         { "label": "Participants", "value": "198 total" },
-        { "label": "Skill Badges", "value": "2062 earned" },
-        { "label": "Houses", "value": "7 teams" }
+        { "label": "Skill Badges Earned", "value": "2062" },
+        { "label": "Arcade Games Completed", "value": "112" },
+        {
+          "label": "Houses",
+          "value": "7 (Alpha, Bravo, Charlie, Delta, Enigma, Falcon, Gamma)"
+        },
+        { "label": "Website", "value": "gdg-cloud-jam.vercel.app" }
       ],
       "highlights": [
-        { "text": "Achieved Tier 1 status" },
-        { "text": "101 students finished 19 badges + 1 arcade game" },
-        { "text": "112 arcade games completed" },
-        { "text": "Gamified learning with house competition" }
+        { "text": "Tier 1 status unlocked for GDGoC LDCE" },
+        { "text": "Gamified houses kept engagement high" },
+        {
+          "text": "Mini challenge: Speedathon -🥇 Charlie, 🥈 Bravo, 🥉 Falcon"
+        },
+        { "text": "Mentorship support ensured badge completions" },
+        { "text": "Student feedback: labs were practical & easy to follow" }
       ],
       "color": "green",
       "order": 2,
@@ -71,7 +88,7 @@
           "Develop with Apps Script and AppSheet",
           "Build a Website on Google Cloud",
           "Set Up a Google Cloud Network",
-          "Store, Process, and Manage Data on GCP",
+          "Store, Process, and Manage Data on GCP (Console)",
           "Cloud Functions: 3 Ways",
           "App Engine: 3 Ways",
           "Cloud Speech API: 3 Ways",
@@ -82,69 +99,6 @@
           "Gen AI Arcade Game: Level 3"
         ]
       }
-    },
-    {
-      "id": "orientation-2021",
-      "title": "GDGoC LDCE Orientation — 2025",
-      "eventType": "Community Kickoff / Introduction Session",
-      "description": "The official orientation of GDGoC LDCE marked the beginning of our community journey. The session introduced students to the GDGoC mission, yearly roadmap, Google Developer ecosystem, and the opportunities available for the upcoming academic cycle.",
-      "date": "2025-09-11",
-      "details": [
-        { "label": "Date", "value": "11 September 2025" },
-        { "label": "Venue", "value": "Vishwakarma Hall, LDCE" },
-        { "label": "Attendance", "value": "200+ students" }
-      ],
-      "highlights": [
-        { "text": "Launch of GDGoC LDCE" },
-        { "text": "Yearly roadmap + upcoming events overview" },
-        { "text": "Introduction to GDG ecosystem & student benefits" },
-        { "text": "Community Q&A" },
-        { "text": "Interaction with the core team" }
-      ],
-      "color": "blue",
-      "order": 1
-    },
-    {
-      "id": "orientation-2022",
-      "title": "GDGoC LDCE Orientation — 2025",
-      "eventType": "Community Kickoff / Introduction Session",
-      "description": "The official orientation of GDGoC LDCE marked the beginning of our community journey. The session introduced students to the GDGoC mission, yearly roadmap, Google Developer ecosystem, and the opportunities available for the upcoming academic cycle.",
-      "date": "2025-09-11",
-      "details": [
-        { "label": "Date", "value": "11 September 2025" },
-        { "label": "Venue", "value": "Vishwakarma Hall, LDCE" },
-        { "label": "Attendance", "value": "200+ students" }
-      ],
-      "highlights": [
-        { "text": "Launch of GDGoC LDCE" },
-        { "text": "Yearly roadmap + upcoming events overview" },
-        { "text": "Introduction to GDG ecosystem & student benefits" },
-        { "text": "Community Q&A" },
-        { "text": "Interaction with the core team" }
-      ],
-      "color": "blue",
-      "order": 1
-    },
-    {
-      "id": "orientation-2023",
-      "title": "GDGoC LDCE Orientation — 2025",
-      "eventType": "Community Kickoff / Introduction Session",
-      "description": "The official orientation of GDGoC LDCE marked the beginning of our community journey. The session introduced students to the GDGoC mission, yearly roadmap, Google Developer ecosystem, and the opportunities available for the upcoming academic cycle.",
-      "date": "2025-09-11",
-      "details": [
-        { "label": "Date", "value": "11 September 2025" },
-        { "label": "Venue", "value": "Vishwakarma Hall, LDCE" },
-        { "label": "Attendance", "value": "200+ students" }
-      ],
-      "highlights": [
-        { "text": "Launch of GDGoC LDCE" },
-        { "text": "Yearly roadmap + upcoming events overview" },
-        { "text": "Introduction to GDG ecosystem & student benefits" },
-        { "text": "Community Q&A" },
-        { "text": "Interaction with the core team" }
-      ],
-      "color": "blue",
-      "order": 1
     }
   ]
 }

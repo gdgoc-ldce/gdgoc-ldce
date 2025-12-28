@@ -37,7 +37,7 @@
         "title": {
           "type": "string",
           "description": "Display title of the event",
-          "examples": ["GDGoC LDCE Orientation — 2025"]
+          "examples": ["GDGoC LDCE Orientation - 2025"]
         },
         "eventType": {
           "type": "string",

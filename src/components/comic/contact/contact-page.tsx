@@ -15,45 +15,95 @@ export default function ContactPage() {
     message: "",
   });
   const [errors, setErrors] = useState<ContactFormErrors>({});
-  const [touched, setTouched] = useState<Record<keyof ContactFormData, boolean>>({
+  const [touched, setTouched] = useState<
+    Record<keyof ContactFormData, boolean>
+  >({
     name: false,
     email: false,
     message: false,
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const key = e.target.name as keyof ContactFormData;
-
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-
-    setTouched((prev) => ({
-      ...prev,
-      [key]: true,
-    }));
-
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setTouched((prev) => ({ ...prev, [key]: true }));
     setErrors((prev) => {
       if (!prev[key]) return prev;
-      const nextData = { ...formData, [key]: e.target.value } as ContactFormData;
+      const nextData = {
+        ...formData,
+        [key]: e.target.value,
+      } as ContactFormData;
       const nextErrors = validateContactForm(nextData);
       return { ...prev, [key]: nextErrors[key] };
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    // --- COOLDOWN LOGIC START ---
+    const COOLDOWN_SECONDS = 60; // Set cooldown to 1 minute
+    const lastSubmitTime = localStorage.getItem("lastSubmitTime");
+
+    if (lastSubmitTime) {
+      const timeSinceLastSubmit = Date.now() - parseInt(lastSubmitTime, 10);
+      if (timeSinceLastSubmit < COOLDOWN_SECONDS * 1000) {
+        const timeLeft = Math.ceil(
+          (COOLDOWN_SECONDS * 1000 - timeSinceLastSubmit) / 1000,
+        );
+        alert(`Please wait ${timeLeft} more seconds before submitting again.`);
+        return; // Stop the submission
+      }
+    }
+    // --- COOLDOWN LOGIC END ---
+
+    setIsSubmitting(true);
 
     setTouched({ name: true, email: true, message: true });
     const nextErrors = validateContactForm(formData);
     setErrors(nextErrors);
 
-    if (Object.keys(nextErrors).length > 0) return;
+    if (Object.keys(nextErrors).length > 0) {
+      setIsSubmitting(false);
+      return;
+    }
 
-    setIsSubmitted(true);
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/your-email@example.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(formData),
+        },
+      );
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // On successful submission, set the cooldown timestamp
+        localStorage.setItem("lastSubmitTime", Date.now().toString());
+      } else {
+        console.error("Form submission failed:", await response.text());
+        alert(
+          "Sorry, there was an error sending your message. Please try again.",
+        );
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+      alert(
+        "A network error occurred. Please check your connection and try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -80,6 +130,7 @@ export default function ContactPage() {
                 errors={errors}
                 touched={touched}
                 isHovering={isHovering}
+                isSubmitting={isSubmitting}
                 onHoverChange={setIsHovering}
                 onInputChange={handleInputChange}
                 onSubmit={handleSubmit}

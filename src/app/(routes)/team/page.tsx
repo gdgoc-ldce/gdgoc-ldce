@@ -162,7 +162,7 @@ export default function TeamPage() {
                 Want to join our team?
               </p>
               <Link
-                href="mailto:gdg@ldce.ac.in"
+                href="mailto:gdgocldce@gmail.com"
                 className="mt-2 inline-block font-semibold text-gray-800 underline decoration-4 underline-offset-4 transition-colors hover:text-blue-700"
               >
                 Get in touch!

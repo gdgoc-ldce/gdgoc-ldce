@@ -8,13 +8,15 @@ import { INSTAGRAM_URL } from "./constants";
 
 export default function ContactSuccess() {
   return (
-    <div className="relative rounded-2xl border-4 border-gray-800 bg-gradient-to-br from-purple-50 to-pink-50 p-12 shadow-[8px_8px_0_0_#1f2937]">
-      <ComicTitle bg="green" halftone={true} shadow={true}>
+    <div className="relative flex flex-col items-center justify-center rounded-2xl border-4 border-gray-800 bg-gradient-to-br from-purple-50 to-pink-50 p-12 text-center shadow-[8px_8px_0_0_#1f2937]">
+      <ComicTitle bg="green" halftone={true} shadow={false}>
         THANK YOU!
       </ComicTitle>
 
       <div className="mt-8 space-y-6">
-        <p className="text-2xl font-bold text-gray-900">We'll get back to you soon!</p>
+        <p className="text-2xl font-bold text-gray-900">
+          We'll get back to you soon!
+        </p>
 
         <div className="flex justify-center">
           <motion.div
@@ -37,7 +39,9 @@ export default function ContactSuccess() {
           </motion.div>
         </div>
 
-        <p className="text-lg text-gray-600">Stay updated with our latest events and activities</p>
+        <p className="text-lg text-gray-600">
+          Stay updated with our latest events and activities
+        </p>
       </div>
 
       <div className="absolute -top-4 -right-4 h-8 w-8 rotate-45 border-4 border-gray-800 bg-blue-400" />

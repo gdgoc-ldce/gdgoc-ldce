@@ -40,7 +40,7 @@ export default function StudyJamContent({
             <div key={i} className="flex items-center gap-1 text-sm">
               <span className="text-lg">{w.emoji}</span>
               <span className="font-bold text-gray-800">{w.position}</span>
-              <span className="text-gray-600">— {w.name}</span>
+              <span className="text-gray-600">- {w.name}</span>
             </div>
           ))}
         </div>

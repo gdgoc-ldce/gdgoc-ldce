@@ -5,4 +5,4 @@ export const GOOGLE_COLORS = {
   green: "#0F9D58",
 } as const;
 
-export const INSTAGRAM_URL = "https://instagram.com/gdgocldce";
+export const INSTAGRAM_URL = "https://www.instagram.com/gdgoc_ldce/";

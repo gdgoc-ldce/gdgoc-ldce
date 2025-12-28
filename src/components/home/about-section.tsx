@@ -59,7 +59,7 @@ const BENTO_ITEMS = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="mx-auto max-w-7xl px-6">
+    <section id="about" className="mx-auto mb-16 max-w-7xl px-6">
       <div className="mb-4 text-center text-sm font-bold tracking-widest text-blue-600 uppercase">
         About Us
       </div>
@@ -97,7 +97,7 @@ export default function AboutSection() {
         )}
       </div>
 
-      <div className="mx-auto mt-16 grid w-full max-w-3xl grid-cols-3 gap-8 text-center">
+      {/* <div className="mx-auto mt-16 grid w-full max-w-3xl grid-cols-3 gap-8 text-center">
         {STATS.map((stat) => (
           <div key={stat.label}>
             <div className="mb-1 text-4xl font-bold text-gray-900">
@@ -106,7 +106,7 @@ export default function AboutSection() {
             <div className="text-sm text-gray-600">{stat.label}</div>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

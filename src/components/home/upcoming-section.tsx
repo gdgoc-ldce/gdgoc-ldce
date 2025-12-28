@@ -50,7 +50,7 @@ export default function UpcomingSection() {
     });
 
   return (
-    <section className="mx-auto flex min-h-[70vh] w-full max-w-7xl flex-col items-center justify-between gap-16 rounded-3xl border bg-white p-10 md:flex-row">
+    <section className="mx-auto flex min-h-180 w-full max-w-7xl flex-col items-center justify-between gap-16 rounded-3xl border bg-white p-10 md:flex-row">
       <div className="font-title flex flex-col gap-4">
         <div className="flex text-3xl font-bold md:text-7xl">
           {renderWord("Upcoming")}
@@ -74,16 +74,12 @@ export default function UpcomingSection() {
 
         <div className="flex flex-col gap-4 rounded-lg border bg-gray-50 p-4">
           <div className="detail-item">
-            <b>Date</b>
-            <span>TBD</span>
+            <b>Status</b>
+            <span>LIVE!</span>
           </div>
           <div className="detail-item">
             <b>Venue</b>
             <span>Online</span>
-          </div>
-          <div className="detail-item">
-            <b>Audience</b>
-            <span>Students (all branches, beginner-friendly)</span>
           </div>
         </div>
 
@@ -98,6 +94,15 @@ export default function UpcomingSection() {
             <li>Present the project to mentors/judges</li>
           </ul>
         </div>
+        <button className="group font-title relative w-full overflow-hidden rounded-lg border-[3px] border-black bg-yellow-300 px-4 py-3 text-lg tracking-wide text-black uppercase shadow-[6px_6px_0px_#000] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[9px_9px_0px_#000] active:translate-y-0 active:shadow-[4px_4px_0px_#000]">
+          <span className="relative z-10 flex items-center justify-center gap-2.5">
+            Learn More
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-black bg-white text-xl leading-none transition-transform duration-200 group-hover:translate-x-1">
+              →
+            </span>
+          </span>
+          <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-size-[6px_6px] opacity-60"></span>
+        </button>
       </div>
     </section>
   );
