@@ -15,7 +15,7 @@ export default function ContactSuccess() {
 
       <div className="mt-8 space-y-6">
         <p className="text-2xl font-bold text-gray-900">
-          We'll get back to you soon!
+          We&apos;ll get back to you soon!
         </p>
 
         <div className="flex justify-center">

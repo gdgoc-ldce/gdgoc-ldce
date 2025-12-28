@@ -84,7 +84,7 @@ export default function UpcomingSection() {
         </div>
 
         <div>
-          <h3 className="section-title">What You'll Do</h3>
+          <h3 className="section-title">What You&apos;ll Do</h3>
           <ul className="custom-list">
             <li>Identify a real-world problem</li>
             <li>

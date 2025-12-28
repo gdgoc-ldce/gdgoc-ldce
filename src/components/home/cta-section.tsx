@@ -10,8 +10,8 @@ export default function CtaSection() {
             Ready to Start Your Journey?
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-xl opacity-90 md:text-2xl">
-            Be a part of our vibrant developer community at LDCE. Whether you're
-            a beginner or an experienced coder, there's a place for you here to
+            Be a part of our vibrant developer community at LDCE. Whether you&apos;re
+            a beginner or an experienced coder, there&apos;s a place for you here to
             learn, grow, and innovate!
           </p>
           <div className="flex flex-col justify-center gap-4 sm:flex-row">

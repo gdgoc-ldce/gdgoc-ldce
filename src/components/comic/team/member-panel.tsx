@@ -67,7 +67,7 @@ const socialIcons = {
 };
 
 export function MemberPanel({ member, index }: MemberPanelProps) {
-  const colorValue = GOOGLE_COLORS[member.color];
+  const colorValue: string = GOOGLE_COLORS[member.color];
   const isEven = index % 2 === 0;
 
   return (
@@ -166,7 +166,7 @@ export function MemberPanel({ member, index }: MemberPanelProps) {
                     return (
                       <motion.a
                         key={platform}
-                        href={url}
+                        href={url as string}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex h-9 w-9 items-center justify-center rounded-lg border-2 border-gray-800 bg-white text-gray-700 shadow-[2px_2px_0_0_#1f2937] transition-colors hover:text-white"

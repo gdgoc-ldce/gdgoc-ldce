@@ -50,7 +50,7 @@ function ZapLines({ color, side }: { color: string; side: "left" | "right" }) {
     <div
       className={`pointer-events-none absolute top-1/2 z-30 -translate-y-1/2 ${side === "left" ? "-left-8" : "-right-8"}`}
     >
-      {[...Array(5)].map((_, i) => (
+      {Array.from({ length: 5 }, (_, i) => (
         <motion.div
           key={i}
           className="absolute h-1 origin-center"

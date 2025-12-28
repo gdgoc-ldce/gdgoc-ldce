@@ -30,7 +30,7 @@ const BENTO_ITEMS = [
             <ListItem>Empower students to grow through technology</ListItem>
             <ListItem>Bridge the gap between theory and practice</ListItem>
             <ListItem>
-              Enhance students' employability and career readiness
+              Enhance students&apos; employability and career readiness
             </ListItem>
           </ul>
         </div>
