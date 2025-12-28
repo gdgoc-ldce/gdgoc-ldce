@@ -62,7 +62,7 @@ export default function UpcomingSection() {
 
       <div className="flex rotate-2 flex-col gap-6 rounded-2xl border bg-blue-50 p-5 font-sans shadow-[12px_12px_0px_#000] md:absolute md:-top-20 md:right-0 md:w-[40%] md:rotate-6">
         <div>
-          <h2 className="text-5xl font-bold text-black">TechSpring x LDCE</h2>
+          <h2 className="text-5xl font-bold text-black">TechSprint X LDCE</h2>
           <span className="event-tag">Hackathon</span>
         </div>
 
