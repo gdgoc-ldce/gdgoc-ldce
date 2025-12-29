@@ -45,7 +45,7 @@ export default function Navigation() {
               </Link>
             ))}
             <Link
-              href="/contact"
+              href="https://gdg.community.dev/gdg-on-campus-ld-college-of-engineering-ahmedabad-india/"
               className="rounded-full bg-gray-900 px-5 py-2 text-sm font-semibold text-white shadow-md transition-all hover:bg-gray-800 hover:shadow-lg"
             >
               Join Us
