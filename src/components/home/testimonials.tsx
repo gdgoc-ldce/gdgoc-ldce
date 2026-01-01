@@ -95,14 +95,14 @@ export const Testimonials = () => {
       </div>
     );
     return card.link ? (
-      <a
+      <Link
         href={card.link}
         target="_blank"
         rel="nofollow noreferrer"
         style={{ textDecoration: "none" }}
       >
         {CardContent}
-      </a>
+      </Link>
     ) : (
       CardContent
     );

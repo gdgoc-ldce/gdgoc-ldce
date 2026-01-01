@@ -6,7 +6,7 @@ import { Bebas_Neue, Inter } from "next/font/google";
 import SmoothScroll from "@/components/smooth-scroll";
 import Navigation from "@/components/navbar";
 import Footer from "@/components/footer";
-
+import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   metadataBase: new URL("https://gdgoc-ldce.vercel.app"),
   title: {
@@ -105,6 +105,7 @@ export default function RootLayout({
         <Navigation />
         <main className="relative z-10">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
