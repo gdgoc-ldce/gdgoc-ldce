@@ -35,7 +35,7 @@ function ModalBackdrop({ onClose }: { onClose: () => void }) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm"
+      className="fixed inset-0 z-9998 bg-black/60 backdrop-blur-sm"
       onClick={onClose}
     />
   );
@@ -141,7 +141,7 @@ export default function EventModal({
             animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 50, rotateX: 15 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="fixed inset-4 z-50 m-auto flex max-h-[85vh] max-w-2xl flex-col overflow-hidden rounded-xl border-4 border-gray-800 bg-white shadow-[8px_8px_0_0_#1f2937] md:inset-8"
+            className="fixed inset-4 z-9999 m-auto flex max-h-[85vh] max-w-2xl flex-col overflow-hidden rounded-xl border-4 border-gray-800 bg-white shadow-[8px_8px_0_0_#1f2937] md:inset-8"
             style={{ perspective: "1000px" }}
             data-lenis-prevent
             role="dialog"

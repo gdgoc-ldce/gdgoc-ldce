@@ -53,7 +53,7 @@ export default function UpcomingSection() {
     <section className="mx-auto flex min-h-180 w-full max-w-7xl flex-col items-center justify-between gap-16 rounded-3xl border bg-white p-10 md:flex-row">
       <div className="font-title flex flex-col gap-4">
         <div className="flex text-3xl font-bold md:text-7xl">
-          {renderWord("Upcoming")}
+          {renderWord("Ongoing")}
         </div>
         <div className="flex text-3xl font-bold md:text-7xl">
           {renderWord("Event")}

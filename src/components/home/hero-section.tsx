@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function HeroSection() {
   return (
     <section className="mx-auto flex min-h-[90vh] max-w-7xl flex-col items-center justify-end px-6 pt-16 text-center">
@@ -20,9 +22,11 @@ export default function HeroSection() {
       </p>
 
       <div className="flex flex-col gap-4 sm:flex-row">
-        <button className="rounded-full border border-gray-300 bg-white/80 px-8 py-3.5 text-sm font-semibold text-gray-900 backdrop-blur-sm transition-all hover:border-gray-400 hover:bg-white">
-          View Events
-        </button>
+        <Link href={"/events"}>
+          <button className="cursor-pointer rounded-full border border-gray-300 bg-white/80 px-8 py-3.5 text-sm font-semibold text-gray-900 backdrop-blur-sm transition-all hover:border-gray-400 hover:bg-white">
+            View Events
+          </button>
+        </Link>
       </div>
     </section>
   );
