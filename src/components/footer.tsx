@@ -20,7 +20,7 @@ const FOOTER_SECTIONS = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: FaWhatsapp, href: "https://linktr.ee/gdgoc_ldce" },
+  { icon: FaWhatsapp, href: "https://chat.whatsapp.com/Ektdos2rW7TFn6cv0bGVKy" },
   {
     icon: FaLinkedinIn,
     href: "https://www.linkedin.com/company/gdgoc-ldce/posts/?feedView=all",
