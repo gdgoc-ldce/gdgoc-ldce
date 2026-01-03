@@ -36,7 +36,7 @@ export default function Footer() {
           <div>
             <div className="mb-4 flex items-center justify-center gap-2 text-center">
               <span className="text-2xl font-bold text-gray-900">
-                &lt;/&gt;
+                &lt;&gt;
               </span>
               <span className="text-center text-lg font-semibold text-gray-900">
                 GDGOC LDCE
