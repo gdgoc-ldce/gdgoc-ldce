@@ -82,7 +82,7 @@ export default function Footer() {
           <div className="flex flex-col items-center gap-2 md:flex-row md:items-center md:justify-center">
             <div className="text-center">
               <p>
-                © 2025 Google Developer Groups on Campus - LDCE. All rights
+                © 2026 Google Developer Groups on Campus - LDCE. All rights
                 reserved.
               </p>
               <p className="mt-1 flex items-center justify-center gap-1 text-center text-xs md:mt-0">
