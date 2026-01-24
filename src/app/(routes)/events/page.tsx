@@ -35,6 +35,9 @@ function toModalData(event: Event): EventModalData {
     details: event.details,
     highlights: event.highlights,
     color: event.color,
+    images: event.images,
+    hackathonData: event.hackathonData,
+    linkedinUrl: event.linkedinUrl,
     extraContent: event.studyJamData ? (
       <StudyJamContent
         houseMentors={event.studyJamData.houseMentors}

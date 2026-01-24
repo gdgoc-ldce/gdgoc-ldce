@@ -35,7 +35,7 @@
       "description": "A month-long, gamified cloud upskilling journey where students mastered Google Cloud fundamentals via labs, quests, and hands-on activities. Achieved Tier 1 status with standout completion and engagement metrics.",
       "date": "2025-10-20",
       "details": [
-        { "label": "Duration", "value": "20 October – 19 November 2025" },
+        { "label": "Duration", "value": "20 October - 19 November 2025" },
         { "label": "Mode", "value": "Online" },
         {
           "label": "Completions",
@@ -67,7 +67,7 @@
           { "house": "Bravo", "mentor": "Shalvi Rajpura" },
           { "house": "Charlie", "mentor": "Taral Shah" },
           { "house": "Delta", "mentor": "Jay Mehta" },
-          { "house": "Enigma", "mentor": "Jyortiaditya Parmar" },
+          { "house": "Enigma", "mentor": "Jyotiraditya Parmar" },
           { "house": "Falcon", "mentor": "Kalpana Gupta" },
           { "house": "Gamma", "mentor": "Herin Soni" }
         ],
@@ -97,6 +97,148 @@
           "Prompt Design in Vertex AI",
           "Develop GenAI Apps with Gemini & Streamlit",
           "Gen AI Arcade Game: Level 3"
+        ]
+      }
+    },
+    {
+      "id": "hack-and-learn-ai-2025",
+      "title": "Hack and Learn AI",
+      "eventType": "Expert Session / Workshop",
+      "description": "An interactive session designed for students and developers to build meaningful AI projects. Led by Krishna N. Mehta (Visa), the session focused on practical learning, hackathon strategies, and industry expectations rather than theory alone. Attendees gained insights into how AI is built, evaluated, and applied in the real world.",
+      "date": "2025-12-29",
+      "linkedinUrl": "https://www.linkedin.com/posts/gdgoc-ldce_hack-learn-ai-techsprint-ldce-expert-activity-7412173736327548928-Liep?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEjo9WcB_2VNDgnKsYUy-x_oM3sjuhC2OLo",
+      "details": [
+        { "label": "Date", "value": "29 December 2025" },
+        { "label": "Speaker", "value": "Krishna N. Mehta (Visa)" },
+        { "label": "RSVP", "value": "109 Attendees" },
+        { "label": "Mode", "value": "Online" }
+      ],
+      "highlights": [
+        { "text": "Deep dive into 'Build with AI' concepts" },
+        { "text": "Strategies to perform better in hackathons" },
+        {
+          "text": "Real-world industry perspectives from Visa & Akamai experience"
+        },
+        {
+          "text": "Bonus: Lovable Pro access + $25 credits provided to attendees"
+        }
+      ],
+      "color": "blue",
+      "order": 3
+    },
+    {
+      "id": "hack-and-learn-firebase-2026",
+      "title": "Hack and Learn Firebase",
+      "eventType": "Hands-on Workshop",
+      "description": "A comprehensive hands-on workshop led by Srushti Raybhoge, a Google Developer Expert (GDE) in Firebase. Participants dove deep into Firebase fundamentals, covering authentication, cloud storage, and database integration. The session provided practical exercises to help students master tools needed for building scalable applications.",
+      "date": "2026-01-02",
+      "linkedinUrl": "https://www.linkedin.com/posts/gdgoc-ldce_techsprint-ldce-expertsession-activity-7412901246946344960-JWch?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEjo9WcB_2VNDgnKsYUy-x_oM3sjuhC2OLo",
+      "details": [
+        { "label": "Date", "value": "2 January 2026" },
+        { "label": "Speaker", "value": "Srushti Raybhoge (GDE, Addepar)" },
+        { "label": "RSVP", "value": "78 Attendees" },
+        { "label": "Mode", "value": "Online" }
+      ],
+      "highlights": [
+        { "text": "Led by a Google Developer Expert (GDE) in Firebase" },
+        {
+          "text": "Hands-on exercises on Authentication & Database integration"
+        },
+        { "text": "Refined skills for building end-to-end applications" },
+        { "text": "Interactive Q&A regarding scalable app development" }
+      ],
+      "color": "yellow",
+      "order": 4
+    },
+    {
+      "id": "techsprint-x-ldce-2026",
+      "title": "TechSprint x LDCE Hackathon",
+      "eventType": "Open Innovation Hackathon",
+      "description": "An Open Innovation Hackathon that brought together 180 students from across the nation to ideate, design, and develop technology-driven solutions for real-world challenges, encouraging creativity, innovation, and problem-solving.",
+      "date": "2026-01-20",
+      "details": [
+        { "label": "Date", "value": "20th January 2026" },
+        {
+          "label": "Venue",
+          "value": "Lalbhai Dalpatbhai College of Engineering (LDCE)"
+        },
+        { "label": "Participants", "value": "180 students" }
+      ],
+      "images": [
+        {
+          "src": "/images/events/techsprint/winners.jpg",
+          "alt": "Photo of the winning team, TetraSquad",
+          "caption": "🥇 Winner: TetraSquad"
+        },
+        {
+          "src": "/images/events/techsprint/second.jpg",
+          "alt": "Photo of the 1st runner-up team, CodeX",
+          "caption": "🥈 1st Runner-Up: CodeX"
+        },
+        {
+          "src": "/images/events/techsprint/third.jpg",
+          "alt": "Photo of the 2nd runner-up team, Spark",
+          "caption": "🥉 2nd Runner-Up: Spark"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "Two pre-mentoring expert sessions conducted by industry professionals."
+        },
+        {
+          "text": "Projects evaluated by an expert panel on innovation, feasibility, impact, and use of Google technologies."
+        },
+        {
+          "text": "Provided students with hands-on learning, industry exposure, and collaborative innovation."
+        },
+        {
+          "text": "Strengthened the campus technology ecosystem and nurtured future-ready developers."
+        }
+      ],
+      "color": "red",
+      "order": 5,
+      "hackathonData": {
+        "preMentoringSessions": [
+          {
+            "title": "Hack & Learn AI",
+            "speaker": "Krishna N. Mehta, Software Engineer at Visa",
+            "description": "A hands-on session covering how to win hackathons, along with an introduction to Artificial Intelligence concepts and practical AI tools."
+          },
+          {
+            "title": "Hack & Learn Firebase",
+            "speaker": "Srushti Raybhoge, Google Developer Expert (GDE)",
+            "description": "A hands-on technical session focused on building end-to-end applications using Firebase, including setup, authentication, cloud storage, database integration, and best practices."
+          }
+        ],
+        "evaluationCriteria": [
+          "Innovation and Quality of the Idea",
+          "Technical Feasibility of Implementation",
+          "Potential Impact of the Solution",
+          "Effective Use of Google Technologies"
+        ],
+        "winningTeams": [
+          {
+            "rank": "Winner",
+            "teamName": "TetraSquad",
+            "lead": "Laksh Tank",
+            "members": [
+              "Vaghani Kunj",
+              "Shah Nishtha Divyeshkumar",
+              "Patel Megh Alpeshbhai"
+            ]
+          },
+          {
+            "rank": "1st Runner-Up",
+            "teamName": "CodeX",
+            "lead": "Parmar Krish",
+            "members": ["Parmar Falguni"]
+          },
+          {
+            "rank": "2nd Runner-Up",
+            "teamName": "Spark",
+            "lead": "Juhi Vanjara",
+            "members": ["Snehi Patel", "Yashvi Sanghvi"]
+          }
         ]
       }
     }

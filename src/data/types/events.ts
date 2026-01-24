@@ -26,12 +26,37 @@ export interface StudyJamData {
   syllabus: string[];
 }
 
+export interface MentoringSession {
+  title: string;
+  speaker: string;
+  description: string;
+}
+
+export interface WinningTeam {
+  rank: string;
+  teamName: string;
+  lead: string;
+  members: string[];
+}
+
+export interface HackathonData {
+  preMentoringSessions: MentoringSession[];
+  evaluationCriteria: string[];
+  winningTeams: WinningTeam[];
+}
+
+export interface EventImage {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
 export interface Event {
   id: string;
   title: string;
   eventType: string;
   description: string;
-
+  linkedinUrl?: string;
   /**
    * ISO date string for the event
    * For multi-day events, use the start date
@@ -58,10 +83,19 @@ export interface Event {
   color: EventColor;
 
   /**
+   * Optional: Gallery images
+   */
+  images?: EventImage[];
+
+  /**
    * Optional: Extra content for Study Jam type events
-   * Include this only for events that have houses, winners, syllabus
    */
   studyJamData?: StudyJamData;
+
+  /**
+   * Optional: Extra content for Hackathon type events
+   */
+  hackathonData?: HackathonData;
 
   order?: number;
   isVisible?: boolean;

@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const CheckIcon = ({ className }: { className?: string }) => (
   <svg
@@ -17,7 +18,8 @@ const CheckIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export default function UpcomingSection() {
+export default function PastEventSection() {
+  const router = useRouter();
   const pastels = ["#FFB7B2", "#FFDAC1", "#E2F0CB", "#B5EAD7", "#C7CEEA"];
 
   const renderWord = (word: string) =>
@@ -53,7 +55,7 @@ export default function UpcomingSection() {
     <section className="mx-auto flex min-h-180 w-full max-w-7xl flex-col items-center justify-between gap-16 rounded-3xl border bg-white p-10 md:flex-row">
       <div className="font-title flex flex-col gap-4">
         <div className="flex text-3xl font-bold md:text-7xl">
-          {renderWord("Ongoing")}
+          {renderWord("Recent")}
         </div>
         <div className="flex text-3xl font-bold md:text-7xl">
           {renderWord("Event")}
@@ -68,14 +70,14 @@ export default function UpcomingSection() {
 
         <p className="text-lg leading-relaxed text-gray-700">
           An open-innovation hackathon inspired by the Google Solution Challenge
-          format. Solve real-world problems, build impactful prototypes, and
-          showcase your creativity.
+          format. Solved real-world problems, built impactful prototypes, and
+          showcased creativity.
         </p>
 
         <div className="flex flex-col gap-4 rounded-lg border bg-gray-50 p-4">
           <div className="detail-item">
             <b>Status</b>
-            <span>LIVE!</span>
+            <span>Completed!</span>
           </div>
           <div className="detail-item">
             <b>Venue</b>
@@ -84,30 +86,28 @@ export default function UpcomingSection() {
         </div>
 
         <div>
-          <h3 className="section-title">What You&apos;ll Do</h3>
+          <h3 className="section-title">What Participants Did</h3>
           <ul className="custom-list">
-            <li>Identify a real-world problem</li>
+            <li>Identified a real-world problem</li>
             <li>
-              Propose a solution using tech (software / ML / mobile / web)
+              Proposed a solution using tech (software / ML / mobile / web)
             </li>
-            <li>Build a prototype within the hackathon timeframe</li>
-            <li>Present the project to mentors/judges</li>
+            <li>Built a prototype within the hackathon timeframe</li>
+            <li>Presented the project to mentors/judges</li>
           </ul>
         </div>
-        <a
-          href="https://vision.hack2skill.com/event/gdgoc-25-techsprint-ldce"
-          target="_blank"
-          rel="noreferrer"
+        <button
+          onClick={() => router.push("/events")}
           className="group font-title relative w-full overflow-hidden rounded-lg border-[3px] border-black bg-yellow-300 px-4 py-3 text-lg tracking-wide text-black uppercase shadow-[6px_6px_0px_#000] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[9px_9px_0px_#000] active:translate-y-0 active:shadow-[4px_4px_0px_#000]"
         >
           <span className="relative z-10 flex items-center justify-center gap-2.5">
-            Learn More
+            View All Events
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border-2 border-black bg-white text-xl leading-none transition-transform duration-200 group-hover:translate-x-1">
               →
             </span>
           </span>
           <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(0,0,0,0.08)_1px,transparent_1px)] bg-size-[6px_6px] opacity-60"></span>
-        </a>
+        </button>
       </div>
     </section>
   );

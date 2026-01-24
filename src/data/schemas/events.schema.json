@@ -30,159 +30,142 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Unique identifier for the event. Use lowercase with hyphens (kebab-case)",
-          "pattern": "^[a-z0-9-]+$",
-          "examples": ["orientation-2025", "cloud-study-jam-2025"]
+          "pattern": "^[a-z0-9-]+$"
         },
-        "title": {
-          "type": "string",
-          "description": "Display title of the event",
-          "examples": ["GDGoC LDCE Orientation - 2025"]
-        },
-        "eventType": {
-          "type": "string",
-          "description": "Type/category of the event",
-          "examples": [
-            "Community Kickoff / Introduction Session",
-            "Hands-on Cloud Learning Program"
-          ]
-        },
-        "description": {
-          "type": "string",
-          "description": "Full description of the event. Can be multiple sentences."
-        },
-        "date": {
-          "type": "string",
-          "format": "date",
-          "description": "ISO date string (YYYY-MM-DD). For multi-day events, use the start date.",
-          "examples": ["2025-09-11", "2025-10-20"]
-        },
+        "title": { "type": "string" },
+        "eventType": { "type": "string" },
+        "description": { "type": "string" },
+        "date": { "type": "string", "format": "date" },
         "details": {
           "type": "array",
-          "description": "Array of detail items to show on the card",
-          "items": {
-            "$ref": "#/definitions/EventDetail"
-          }
+          "items": { "$ref": "#/definitions/EventDetail" }
         },
         "highlights": {
           "type": "array",
-          "description": "Key highlights/achievements from the event",
-          "items": {
-            "$ref": "#/definitions/EventHighlight"
-          }
+          "items": { "$ref": "#/definitions/EventHighlight" }
+        },
+        "images": {
+          "type": "array",
+          "description": "Gallery images for the event",
+          "items": { "$ref": "#/definitions/EventImage" }
         },
         "color": {
           "type": "string",
-          "enum": ["blue", "red", "green", "yellow"],
-          "description": "Color theme for the event card. Choose from Google brand colors."
+          "enum": ["blue", "red", "green", "yellow"]
         },
-        "order": {
-          "type": "number",
-          "description": "Display order (lower numbers appear first). If not specified, events are sorted by date."
-        },
-        "isVisible": {
-          "type": "boolean",
-          "default": true,
-          "description": "Set to false to hide an event without deleting it"
-        },
+        "order": { "type": "number" },
+        "isVisible": { "type": "boolean", "default": true },
         "studyJamData": {
           "$ref": "#/definitions/StudyJamData",
           "description": "Optional: Extra content for Study Jam type events"
+        },
+        "hackathonData": {
+          "$ref": "#/definitions/HackathonData",
+          "description": "Optional: Extra content for Hackathon type events"
         }
       }
     },
     "EventDetail": {
       "type": "object",
-      "description": "A single detail item shown on the event card",
       "required": ["label", "value"],
       "properties": {
-        "label": {
-          "type": "string",
-          "description": "The label/title for this detail",
-          "examples": ["Date", "Venue", "Mode", "Attendance", "Duration"]
-        },
-        "value": {
-          "type": "string",
-          "description": "The value of this detail",
-          "examples": ["11 September 2025", "Vishwakarma Hall, LDCE", "Online"]
-        }
+        "label": { "type": "string" },
+        "value": { "type": "string" }
       }
     },
     "EventHighlight": {
       "type": "object",
-      "description": "A highlight point for the event",
       "required": ["text"],
       "properties": {
-        "text": {
-          "type": "string",
-          "description": "The highlight text to display",
-          "examples": ["200+ participants", "Achieved Tier 1 status"]
+        "text": { "type": "string" }
+      }
+    },
+    "EventImage": {
+      "type": "object",
+      "required": ["src", "alt"],
+      "properties": {
+        "src": { "type": "string" },
+        "alt": { "type": "string" },
+        "caption": { "type": "string" }
+      }
+    },
+    "HackathonData": {
+      "type": "object",
+      "required": [
+        "preMentoringSessions",
+        "evaluationCriteria",
+        "winningTeams"
+      ],
+      "properties": {
+        "preMentoringSessions": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/MentoringSession" }
+        },
+        "evaluationCriteria": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "winningTeams": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/WinningTeam" }
+        }
+      }
+    },
+    "MentoringSession": {
+      "type": "object",
+      "required": ["title", "speaker", "description"],
+      "properties": {
+        "title": { "type": "string" },
+        "speaker": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "WinningTeam": {
+      "type": "object",
+      "required": ["rank", "teamName", "lead", "members"],
+      "properties": {
+        "rank": { "type": "string" },
+        "teamName": { "type": "string" },
+        "lead": { "type": "string" },
+        "members": {
+          "type": "array",
+          "items": { "type": "string" }
         }
       }
     },
     "StudyJamData": {
       "type": "object",
-      "description": "Extra content for Study Jam type events",
       "required": ["houseMentors", "winners", "syllabus"],
       "properties": {
         "houseMentors": {
           "type": "array",
-          "description": "List of house mentors",
-          "items": {
-            "$ref": "#/definitions/HouseMentor"
-          }
+          "items": { "$ref": "#/definitions/HouseMentor" }
         },
         "winners": {
           "type": "array",
-          "description": "List of winners",
-          "items": {
-            "$ref": "#/definitions/Winner"
-          }
+          "items": { "$ref": "#/definitions/Winner" }
         },
         "syllabus": {
           "type": "array",
-          "description": "Syllabus/topics covered in the program",
-          "items": {
-            "type": "string"
-          }
+          "items": { "type": "string" }
         }
       }
     },
     "HouseMentor": {
       "type": "object",
-      "description": "House mentor information",
       "required": ["house", "mentor"],
       "properties": {
-        "house": {
-          "type": "string",
-          "description": "Name of the house",
-          "examples": ["Alpha", "Bravo", "Charlie"]
-        },
-        "mentor": {
-          "type": "string",
-          "description": "Name of the mentor leading this house"
-        }
+        "house": { "type": "string" },
+        "mentor": { "type": "string" }
       }
     },
     "Winner": {
       "type": "object",
-      "description": "Winner information for competitive events",
       "required": ["position", "name", "emoji"],
       "properties": {
-        "position": {
-          "type": "string",
-          "description": "Position (1st, 2nd, 3rd, etc.)",
-          "examples": ["1st", "2nd", "3rd"]
-        },
-        "name": {
-          "type": "string",
-          "description": "Name of the winner/team"
-        },
-        "emoji": {
-          "type": "string",
-          "description": "Emoji to display",
-          "examples": ["🥇", "🥈", "🥉"]
-        }
+        "position": { "type": "string" },
+        "name": { "type": "string" },
+        "emoji": { "type": "string" }
       }
     }
   }
